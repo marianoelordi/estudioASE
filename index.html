@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+     <!-- Información y configuración sobre la página -->
+  <meta charset="UTF-8">
+
+     <!-- Adaptación para dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Información sobre la página -->
+  <meta name="description" 
+  content="Estudio jurídico especializado en asuntos judiciales y extrajudiciales en Formosa, Argentina."
+  >
+
+  <title>ASE | Estudio Jurídico</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<!-- Cuerpo de la pagina (xd) -->
+
+<body>
+
+  <!-- Encabezado principal -->
+  <header class="header">
+
+    <div class="container header__container">
+
+      <!-- Logo -->
+      <a
+        href="#inicio"
+        class="header__logo"
+        aria-label="Ir al inicio"
+      >
+      <!-- aca faltaria el logo todavia -->
+        <img
+          src="./assets/logo/logo-ase.svg" 
+          alt="ASE Estudio Jurídico"
+          width="140"
+          height="50"
+        >
+      </a>
+
+      <!-- Botón para el menú en celulares -->
+      <button
+        class="header__menu-button"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+      >
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+      </button>
+
+      <!-- Navegación principal -->
+      <nav
+        id="main-navigation"
+        class="header__navigation"
+        aria-label="Navegación principal"
+      >
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#inicio">
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a class="header__link" href="#servicios">
+              Servicios
+            </a>
+          </li>
+
+          <li>
+            <a class="header__link" href="#nosotros">
+              Nosotros
+            </a>
+          </li>
+
+          <li>
+            <a class="header__link" href="#equipo">
+              Equipo
+            </a>
+          </li>
+
+          <li>
+            <a class="header__link" href="#contacto">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Teléfono -->
+      <a
+        class="header__phone"
+        href="tel:+543704278185"
+        aria-label="Llamar al estudio jurídico"
+      >
+        <span aria-hidden="true">☎</span>
+        <span>0370-4278185</span>
+      </a>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section id="inicio" class="hero">
+
+      <!-- Imagen decorativa de fondo -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__container">
+
+        <div class="hero__content">
+
+          <p class="hero__eyebrow">
+            ASE Estudio Jurídico
+          </p>
+
+          <h1 class="hero__title">
+            Asuntos judiciales<br>
+            y extrajudiciales
+          </h1>
+
+          <p class="hero__description">
+            Brindamos asesoramiento y representación legal con un enfoque
+            profesional, responsable y personalizado para cada situación.
+          </p>
+
+          <div class="hero__actions">
+
+            <a
+              class="button button--primary"
+              href="https://wa.me/5493704278185?text=Hola%2C%20quisiera%20coordinar%20una%20consulta%20jur%C3%ADdica."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicitar consulta
+            </a>
+
+            <a
+              class="button button--secondary"
+              href="#servicios"
+            >
+              Conocer servicios
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Las próximas secciones se agregarán aquí -->
+
+  </main>
+
+  <script src="./js/main.js"></script>
+
+</body>
+</html>

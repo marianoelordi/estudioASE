@@ -1,0 +1,21 @@
+:root {
+  --color-primary: #4b0909;
+  --color-primary-dark: #1a1111;
+  --color-accent: #756044;
+  --color-background: #faf8f3;
+  --color-surface: #ffffff;
+  --color-text: #242020;
+  --color-text-light: #ffffff;
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --container-width: 1200px;
+  --border-radius: 8px;
+  --shadow-card: 0 4px 14px rgb(0 0 0 / 10%);
+}
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
