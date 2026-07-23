@@ -234,7 +234,25 @@ button {
   .header__container {
     min-height: 70px;
   }
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.header__logo img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.header__logo span {
+  max-width: 130px;
+  line-height: 1.2;
+}
   .header__navigation,
   .header__phone {
     display: none;

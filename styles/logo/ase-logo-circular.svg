@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">ASE Estudio Jurídico</title>
+  <desc id="desc">Emblema circular bordó con las letras ASE y una columna jurídica.</desc>
+
+  <circle cx="256" cy="256" r="230" fill="#ffffff" stroke="#570707" stroke-width="14"/>
+
+  <g aria-hidden="true">
+    <text
+      x="70"
+      y="270"
+      fill="#650909"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="205"
+      font-weight="400"
+      letter-spacing="-18"
+    >A</text>
+    <text
+      x="190"
+      y="270"
+      fill="#090909"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="205"
+      font-weight="400"
+      letter-spacing="-18"
+    >S</text>
+    <text
+      x="303"
+      y="270"
+      fill="#650909"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="205"
+      font-weight="400"
+    >E</text>
+
+    <g fill="#650909">
+      <rect x="211" y="307" width="90" height="7" rx="3.5"/>
+      <rect x="219" y="319" width="74" height="7" rx="3.5"/>
+
+      <rect x="225" y="337" width="8" height="83" rx="2"/>
+      <rect x="242" y="337" width="8" height="83" rx="2"/>
+      <rect x="262" y="337" width="8" height="83" rx="2"/>
+      <rect x="279" y="337" width="8" height="83" rx="2"/>
+
+      <rect x="216" y="428" width="80" height="7" rx="3.5"/>
+
+      <rect x="75" y="349" width="120" height="6" rx="3"/>
+      <rect x="317" y="349" width="120" height="6" rx="3"/>
+    </g>
+  </g>
+</svg>
