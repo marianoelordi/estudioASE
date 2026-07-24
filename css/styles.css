@@ -249,10 +249,6 @@ button {
   flex-shrink: 0;
 }
 
-.header__logo span {
-  max-width: 130px;
-  line-height: 1.2;
-}
   .header__navigation,
   .header__phone {
     display: none;
