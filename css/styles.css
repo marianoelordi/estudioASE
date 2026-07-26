@@ -383,6 +383,74 @@ button {
   background-color: transparent;
 }
 
+/* Nosotros */
+.about {
+  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+  background-color: var(--color-background);
+}
+
+.about__title {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-align: center;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+
+.principle-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  min-height: 250px;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.principle-card__title {
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.principle-card__description {
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.35;
+}
+
+.principle-card__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: clamp(6rem, 9vw, 8.25rem);
+  aspect-ratio: 1;
+  color: #e7d9d6;
+  background-color: var(--color-primary);
+}
+
+.principle-card__icon svg {
+  width: 62%;
+  height: 62%;
+  overflow: visible;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.principle-card__icon circle {
+  fill: currentcolor;
+  stroke: none;
+}
+ /* Seccion media */
 @media (max-width: 1024px) {
   .services__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -397,6 +465,16 @@ button {
     grid-column: 1 / -1;
     width: min(100%, calc((100% - 2rem) / 2));
     justify-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-card {
+    min-height: 210px;
   }
 }
 
@@ -477,5 +555,35 @@ button {
 
   .service-card__media {
     min-height: 210px;
+  }
+
+  .about {
+    padding-block: 4rem;
+  }
+
+  .about__title {
+    margin-bottom: 2rem;
+  }
+
+  .principle-card {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .principle-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .principle-card__icon {
+    grid-row: 1;
+    justify-self: center;
+    width: 5.5rem;
+  }
+
+  .principle-card__description {
+    margin-inline: auto;
   }
 }
