@@ -159,7 +159,8 @@ button {
 .hero {
   position: relative;
   display: grid;
-  min-height: 700px;
+  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
 
   color: var(--color-text-light);
@@ -437,7 +438,8 @@ button {
   }
 
   .hero {
-    min-height: 650px;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   .hero__container {
