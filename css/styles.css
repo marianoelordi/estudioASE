@@ -450,6 +450,91 @@ button {
   fill: currentcolor;
   stroke: none;
 }
+
+/* Nuestro equipo */
+.team {
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+  background-color: #f7f5f1;
+}
+
+.team__heading {
+  max-width: 900px;
+  margin: 0 auto clamp(2.75rem, 5vw, 4.5rem);
+  text-align: center;
+}
+
+.team__title {
+  margin-bottom: 0.9rem;
+  color: #654f35;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+.team__description {
+  color: #171717;
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.professional-card {
+  min-width: 0;
+  text-align: center;
+}
+
+.professional-card__image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.professional-card__silhouette {
+  position: relative;
+  display: block;
+  width: 58%;
+  height: 73%;
+  border-radius: 45% 45% 10% 10% / 28% 28% 6% 6%;
+  background-color: #c6c6c6;
+}
+
+.professional-card__silhouette::before {
+  position: absolute;
+  top: -24%;
+  left: 50%;
+  width: 37%;
+  aspect-ratio: 0.82;
+  border-radius: 46% 46% 44% 44% / 35% 35% 58% 58%;
+  content: "";
+  background-color: #c6c6c6;
+  transform: translateX(-50%);
+}
+
+.professional-card__content {
+  padding: 1.15rem 0.5rem 0;
+}
+
+.professional-card__name {
+  color: #080808;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  font-weight: 600;
+}
+
+.professional-card__role {
+  margin-top: 0.65rem;
+  color: #987546;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+}
+
  /* Seccion media */
 @media (max-width: 1024px) {
   .services__grid {
@@ -466,6 +551,10 @@ button {
     width: min(100%, calc((100% - 2rem) / 2));
     justify-self: center;
   }
+
+  .team__grid {
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -475,6 +564,16 @@ button {
 
   .principle-card {
     min-height: 210px;
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .professional-card:last-child {
+    grid-column: 1 / -1;
+    width: min(100%, calc((100% - 1.5rem) / 2));
+    justify-self: center;
   }
 }
 
@@ -569,6 +668,10 @@ button {
     min-height: 0;
     padding: 1.5rem;
   }
+
+  .team {
+    padding-block: 4rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -585,5 +688,19 @@ button {
 
   .principle-card__description {
     margin-inline: auto;
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .professional-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .professional-card__image {
+    aspect-ratio: 1 / 0.95;
   }
 }
