@@ -356,7 +356,7 @@
 
           <article class="principle-card">
             <div class="principle-card__content">
-              <h3 class="principle-card__title">Compromiso</h3>
+              <h3 class="principle-card__title">Compromiso y Confidencialidad</h3>
               <p class="principle-card__description">
                 Soluciones legales personalizadas.
               </p>
@@ -444,67 +444,112 @@
     </section>
 
     <!-- Contacto PROVISIONAL CHEQUEAR DESPUES -->
-     <section id="contacto" class="contact section">
+     <section id="contacto" class="contact">
 
       <div class="container contact__container">
 
         <div class="contact__content">
-          <p class="section-heading__eyebrow">
-            Contacto
-          </p>
+          <div class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <path d="M32 6 52 12v17c0 13-8 23-20 29C20 52 12 42 12 29V12l20-6Z"/>
+              <path d="M32 17v25M22 21h20M21 25l-6 12h12l-6-12ZM43 25l-6 12h12l-6-12ZM16 37c1 4 9 4 10 0M38 37c1 4 9 4 10 0M24 46h16"/>
+            </svg>
+          </div>
 
-          <h2 class="section-heading__title">
-            Coordiná una consulta con nuestro equipo
+          <h2 class="contact__title">
+            Déjanos tu consulta
           </h2>
 
           <p class="contact__description">
-            Contanos brevemente tu situación. Nos comunicaremos con vos para
-            coordinar una entrevista y explicarte los pasos a seguir.
-          </p>
-
-          <p class="contact__notice">
-            La información enviada por estos medios no reemplaza una consulta
-            jurídica profesional.
+            Contanos brevemente tu situación. Nuestro equipo se comunicará con
+            vos para coordinar una entrevista y explicarte los pasos a seguir.
           </p>
         </div>
 
-        <div class="contact__options">
+        <form class="contact-form" action="#" method="post">
 
-          <a class="contact-card" href="tel:+543704278185">
-            <span class="contact-card__icon" aria-hidden="true">☎</span>
-            <span>
-              <span class="contact-card__label">Teléfono</span>
-              <span class="contact-card__value">0370-4278185</span>
-              <span class="contact-card__action">Llamar ahora</span>
-            </span>
-          </a>
+          <div class="contact-form__grid">
+            <div class="contact-form__field">
+              <label for="contact-name">Nombre</label>
+              <input
+                id="contact-name"
+                name="nombre"
+                type="text"
+                placeholder="Tu nombre"
+                autocomplete="name"
+                required
+              >
+            </div>
 
-          <a
-            class="contact-card"
-            href="https://wa.me/5493704278185?text=Hola%2C%20quisiera%20coordinar%20una%20consulta%20jur%C3%ADdica."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="contact-card__icon" aria-hidden="true">W</span>
-            <span>
-              <span class="contact-card__label">WhatsApp</span>
-              <span class="contact-card__value">Enviar una consulta</span>
-              <span class="contact-card__action">Abrir conversación</span>
-            </span>
-          </a>
+            <div class="contact-form__field">
+              <label for="contact-phone">Teléfono</label>
+              <input
+                id="contact-phone"
+                name="telefono"
+                type="tel"
+                placeholder="3704 123456"
+                autocomplete="tel"
+                required
+              >
+            </div>
 
-          <div class="contact-card">
-            <span class="contact-card__icon" aria-hidden="true">◷</span>
-            <span>
-              <span class="contact-card__label">Atención</span>
-              <span class="contact-card__value">Con cita previa</span>
-              <span class="contact-card__action">
-                Consultá la disponibilidad
-              </span>
-            </span>
+            <div class="contact-form__field">
+              <label for="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                placeholder="nombre@correo.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="contact-form__field">
+              <label for="contact-service">Servicio</label>
+              <select id="contact-service" name="servicio" required>
+                <option value="" selected disabled>Seleccioná un servicio</option>
+                <option value="laboral">Derecho laboral</option>
+                <option value="penal">Derecho penal</option>
+                <option value="civil">Derecho civil</option>
+                <option value="familia">Derecho de familia</option>
+                <option value="discapacidad">Discapacidad</option>
+              </select>
+            </div>
+
+            <div class="contact-form__field contact-form__field--full">
+              <label for="contact-subject">Asunto</label>
+              <input
+                id="contact-subject"
+                name="asunto"
+                type="text"
+                placeholder="Motivo de la consulta"
+                required
+              >
+            </div>
+
+            <div class="contact-form__field contact-form__field--full">
+              <label for="contact-message">Mensaje</label>
+              <textarea
+                id="contact-message"
+                name="mensaje"
+                rows="6"
+                placeholder="Escribí tu consulta"
+                required
+              ></textarea>
+            </div>
           </div>
 
-        </div>
+          <button class="contact-form__submit" type="submit">
+            Enviar consulta
+          </button>
+
+          <p class="contact-form__notice">
+            La información enviada no reemplaza una consulta jurídica
+            profesional.
+          </p>
+
+        </form>
 
       </div>
 
