@@ -517,52 +517,93 @@
     <div class="container footer__main">
 
       <div class="footer__brand">
-        <a href="#inicio" class="footer__logo">
-          ASE <span>Estudio Jurídico</span>
+        <a
+          href="#inicio"
+          class="footer__logo"
+          aria-label="Ir al inicio"
+        >
+          <img
+            src="./styles/logo/ase-logo-circular.svg"
+            alt=""
+            width="42"
+            height="42"
+          >
+          <span>Estudio Jurídico ASE</span>
         </a>
-        <p>
-          Asesoramiento y representación en asuntos judiciales y
-          extrajudiciales.
+
+        <p class="footer__description">
+          Asesoramiento jurídico responsable, cercano y personalizado para
+          particulares, profesionales y organizaciones.
         </p>
+
+        <div class="footer__socials" aria-label="Redes sociales">
+          <a
+            class="footer__social-link"
+            href="#"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3l1-4h-4V9c0-.7.3-1 1-1Z"/>
+            </svg>
+          </a>
+
+          <a
+            class="footer__social-link"
+            href="#"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer__column">
-        <h2 class="footer__title">Navegación</h2>
+        <h2 class="footer__title">Links</h2>
         <ul class="footer__links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
 
+      <div class="footer__column footer__column--location">
+        <h2 class="footer__title">Encontranos</h2>
+        <address class="footer__address">
+          <p>Avenida Napoleón Uriburu 100</p>
+          <p>Departamento 2</p>
+          <a href="tel:+543704278185">0370-4278185</a>
+          <a href="mailto:estudiojuridicoazconasanchez@gmail.com">
+            estudiojuridicoazconasanchez@gmail.com
+          </a>
+        </address>
+      </div>
+
       <div class="footer__column">
-        <h2 class="footer__title">Contacto</h2>
+        <h2 class="footer__title">Servicios</h2>
         <ul class="footer__links">
-          <li><a href="tel:+543704278185">0370-4278185</a></li>
+          <li><a href="#servicios">Derecho Civil</a></li>
+          <li><a href="#servicios">Derecho Penal</a></li>
+          <li><a href="#servicios">Derecho Familiar</a></li>
+          <li><a href="#servicios">Derecho Laboral</a></li>
           <li>
             <a
-              href="https://wa.me/5493704278185"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#servicios"
             >
-              WhatsApp
+              Discapacidad
             </a>
           </li>
-          <li>Formosa, Argentina</li>
         </ul>
       </div>
 
     </div>
 
     <div class="footer__bottom">
-      <div class="container footer__bottom-container">
-        <p>
-          &copy; 2026 ASE Estudio Jurídico. Todos los derechos reservados.
-        </p>
-        <a href="#inicio">Volver arriba ↑</a>
-      </div>
+      <p>&copy; Copyright 2026. FORMOSA ARGENTINA</p>
     </div>
 
   </footer>
