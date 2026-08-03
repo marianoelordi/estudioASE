@@ -385,70 +385,61 @@ button {
 
 /* Nosotros */
 .about {
-  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+  padding-block: 4.5rem;
   background-color: var(--color-background);
 }
 
 .about__title {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 2.5rem;
   color: var(--color-primary);
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: 2rem;
   text-align: center;
 }
 
 .about__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 1.75rem);
+  gap: 1.25rem;
 }
 
 .principle-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) 88px;
   align-items: center;
-  gap: clamp(1.25rem, 3vw, 3rem);
-  min-height: 250px;
-  padding: clamp(1.75rem, 4vw, 3rem);
+  gap: 1.5rem;
+
+  min-height: 208px;
+  padding: 2rem 2.25rem;
+
   background-color: var(--color-surface);
   box-shadow: var(--shadow-card);
 }
 
 .principle-card__title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: var(--color-primary);
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-size: 1.5rem;
 }
 
 .principle-card__description {
-  max-width: 34rem;
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  line-height: 1.35;
+  max-width: 28rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 
 .principle-card__icon {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: clamp(6rem, 9vw, 8.25rem);
-  aspect-ratio: 1;
-  color: #e7d9d6;
-  background-color: var(--color-primary);
+  justify-self: end;
+  align-self: center;
+
+  width: 88px;
+  height: 88px;
 }
 
-.principle-card__icon svg {
-  width: 62%;
-  height: 62%;
-  overflow: visible;
-  fill: none;
-  stroke: currentcolor;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.principle-card__icon circle {
-  fill: currentcolor;
-  stroke: none;
+.principle-card__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Nuestro equipo */
