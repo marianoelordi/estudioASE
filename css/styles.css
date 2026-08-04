@@ -2232,3 +2232,72 @@ body.menu-open {
     font-size: 0.78rem;
   }
 }
+
+@media (max-width: 650px) {
+  .home-page .about__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .home-page .principle-card {
+    grid-template-columns: 1fr;
+    align-content: start;
+    min-height: 180px;
+    padding: 0.85rem 0.65rem;
+    gap: 0.65rem;
+    text-align: center;
+  }
+
+  .home-page .principle-card__icon {
+    grid-row: 1;
+    justify-self: center;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .home-page .principle-card__title {
+    margin-bottom: 0.35rem;
+    font-size: clamp(0.78rem, 3.4vw, 1rem);
+  }
+
+  .home-page .principle-card__description {
+    margin-inline: auto;
+    font-size: clamp(0.66rem, 2.7vw, 0.8rem);
+    line-height: 1.35;
+  }
+
+  .home-page .team__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .home-page .professional-card,
+  .home-page .professional-card:last-child {
+    grid-column: auto;
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  .home-page .professional-card__image {
+    aspect-ratio: 0.86 / 1;
+  }
+
+  .home-page .professional-card__content {
+    min-height: 4.5rem;
+    padding: 0.7rem 0.2rem 0.45rem;
+  }
+
+  .home-page .professional-card__name {
+    font-size: clamp(0.68rem, 3vw, 0.88rem);
+    line-height: 1.25;
+  }
+
+  .home-page .professional-card__role {
+    margin-top: 0.35rem;
+    font-size: clamp(0.62rem, 2.7vw, 0.76rem);
+  }
+
+  .home-page .professional-card__icon {
+    display: none;
+  }
+}
