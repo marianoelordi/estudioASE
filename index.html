@@ -79,19 +79,19 @@
           </li>
 
           <li>
-            <a class="header__link" href="#servicios">
+            <a class="header__link" href="./servicios.html">
               Servicios
             </a>
           </li>
 
           <li>
-            <a class="header__link" href="#nosotros">
+            <a class="header__link" href="./nosotros.html">
               Nosotros
             </a>
           </li>
 
           <li>
-            <a class="header__link" href="#equipo">
+            <a class="header__link" href="./nosotros.html#equipo">
               Equipo
             </a>
           </li>
@@ -158,7 +158,7 @@
 
             <a
               class="button button--secondary"
-              href="#servicios"
+              href="./servicios.html"
             >
               Conocer servicios
             </a>
@@ -172,7 +172,7 @@
     </section>
 
     <!-- Servicios PROVISIONAL CHEQUEAR DESPUES -->
-    <section id="servicios" class="services">
+    <section id="servicios" class="services" hidden>
       <div class="container">
 
         <div class="section-heading section-heading--center">
@@ -318,6 +318,36 @@
     <section id="nosotros" class="about">
       <div class="container">
 
+        <article class="about__story">
+          <div class="about__story-content">
+            <div class="about__brand">
+              <img
+                src="./styles/logo/ase-logo-circular.svg"
+                alt=""
+                width="72"
+                height="72"
+              >
+              <h2>Estudio Jurídico</h2>
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+              fringilla, mattis ligula consectetur, ultrices mauris.
+            </p>
+
+            <p class="about__location">
+              <span aria-hidden="true">⌖</span>
+              Formosa, Argentina
+            </p>
+          </div>
+
+          <div class="about__story-visual" aria-hidden="true">
+            <span>ASE</span>
+            <small>Trayectoria y compromiso</small>
+          </div>
+        </article>
+
         <h2 class="about__title">Nuestros Principios</h2>
 
         <div class="about__grid">
@@ -393,7 +423,22 @@
                 height="88"
               >
             </div>
+          </article>
+        </div>
 
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="preguntas-frecuentes" class="faq">
+      <div class="container faq__container">
+        <h2 class="faq__title">¿Tenés alguna duda?</h2>
+        <a
+          class="button button--primary faq__button"
+          href="./servicios.html#preguntas-frecuentes"
+        >
+          Preguntas frecuentes
+        </a>
       </div>
     </section>
 
@@ -416,32 +461,133 @@
         <div class="team__grid">
 
           <article class="professional-card">
-            <div class="professional-card__image" aria-hidden="true">
-              <span class="professional-card__silhouette"></span>
-            </div>
-            <div class="professional-card__content">
-              <h3 class="professional-card__name">Dr. Azcona Daniel</h3>
-              <p class="professional-card__role">Abogado</p>
+            <button
+              type="button"
+              class="professional-card__toggle"
+              aria-expanded="false"
+              aria-controls="perfil-azcona"
+            >
+              <div class="professional-card__image" aria-hidden="true">
+                <span class="professional-card__silhouette"></span>
+              </div>
+              <div class="professional-card__content">
+                <h3 class="professional-card__name">
+                  Dr. Daniel Alberto Azcona
+                </h3>
+                <p class="professional-card__role">Abogado</p>
+              </div>
+              <span class="professional-card__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="perfil-azcona"
+              class="professional-card__details"
+              hidden
+            >
+              <div class="professional-card__details-inner">
+                <p class="professional-card__specialty">
+                  Derecho Civil, Laboral, de Familia y Penal
+                </p>
+                <p class="professional-card__bio">
+                  Abogado egresado de la Facultad de Derecho de la Universidad
+                  Nacional de Rosario (UNR), con una sólida vocación de
+                  servicio orientada al asesoramiento jurídico y la defensa de
+                  los derechos de sus clientes en la Provincia de Formosa y el
+                  ámbito federal.
+                </p>
+                <p class="professional-card__bio">
+                  Su trayectoria se enfoca en la resolución estratégica de
+                  conflictos en áreas clave como el Derecho Civil, Laboral, de
+                  Familia y Penal. Su práctica profesional se caracteriza por
+                  el rigor técnico, la transparencia y un trato cercano y
+                  personalizado en cada etapa del proceso judicial o
+                  extrajudicial.
+                </p>
+                <p class="professional-card__bio">
+                  Su compromiso es brindar un respaldo legal eficiente, ético
+                  y adaptado a las necesidades reales de cada persona o entidad
+                  que representa.
+                </p>
+                <ul class="professional-card__meta">
+                  <li>M.P. N.º 2.992 — Provincia de Formosa</li>
+                  <li>T.º 100, F.º 981 — Fuero Federal</li>
+                </ul>
+              </div>
             </div>
           </article>
 
           <article class="professional-card">
-            <div class="professional-card__image" aria-hidden="true">
-              <span class="professional-card__silhouette"></span>
-            </div>
-            <div class="professional-card__content">
-              <h3 class="professional-card__name">Dr. Elordi Eliseo</h3>
-              <p class="professional-card__role">Abogado</p>
+            <button
+              type="button"
+              class="professional-card__toggle"
+              aria-expanded="false"
+              aria-controls="perfil-elordi"
+            >
+              <div class="professional-card__image" aria-hidden="true">
+                <span class="professional-card__silhouette"></span>
+              </div>
+              <div class="professional-card__content">
+                <h3 class="professional-card__name">Dr. Elordi Eliseo</h3>
+                <p class="professional-card__role">Abogado</p>
+              </div>
+              <span class="professional-card__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="perfil-elordi"
+              class="professional-card__details"
+              hidden
+            >
+              <div class="professional-card__details-inner">
+                <p class="professional-card__specialty">
+                  Derecho Laboral y Previsional
+                </p>
+                <p class="professional-card__bio">
+                  Acompaña a trabajadores y empleadores en conflictos
+                  laborales, negociaciones y trámites previsionales, buscando
+                  siempre resguardar los derechos de cada parte.
+                </p>
+                <ul class="professional-card__meta">
+                  <li>Matrícula N.º —</li>
+                  <li>contacto@estudioase.com.ar</li>
+                </ul>
+              </div>
             </div>
           </article>
 
           <article class="professional-card">
-            <div class="professional-card__image" aria-hidden="true">
-              <span class="professional-card__silhouette"></span>
-            </div>
-            <div class="professional-card__content">
-              <h3 class="professional-card__name">Dr. Sanchez Rodolfo</h3>
-              <p class="professional-card__role">Abogado</p>
+            <button
+              type="button"
+              class="professional-card__toggle"
+              aria-expanded="false"
+              aria-controls="perfil-sanchez"
+            >
+              <div class="professional-card__image" aria-hidden="true">
+                <span class="professional-card__silhouette"></span>
+              </div>
+              <div class="professional-card__content">
+                <h3 class="professional-card__name">Dr. Sanchez Rodolfo</h3>
+                <p class="professional-card__role">Abogado</p>
+              </div>
+              <span class="professional-card__icon" aria-hidden="true"></span>
+            </button>
+            <div
+              id="perfil-sanchez"
+              class="professional-card__details"
+              hidden
+            >
+              <div class="professional-card__details-inner">
+                <p class="professional-card__specialty">
+                  Derecho Penal
+                </p>
+                <p class="professional-card__bio">
+                  Brinda defensa y asesoramiento en causas penales,
+                  acompañando a sus asistidos en cada etapa del proceso con
+                  seriedad y compromiso profesional.
+                </p>
+                <ul class="professional-card__meta">
+                  <li>Matrícula N.º —</li>
+                  <li>contacto@estudioase.com.ar</li>
+                </ul>
+              </div>
             </div>
           </article>
 
@@ -449,6 +595,149 @@
 
       </div>
 
+    </section>
+
+    <section class="team-cta" aria-labelledby="team-cta-title">
+      <div class="container team-cta__container">
+        <div class="team-cta__visual" aria-hidden="true">
+          <span>ASE</span>
+        </div>
+        <div class="team-cta__content">
+          <p class="team-cta__eyebrow">Nuestro estudio</p>
+          <h2 id="team-cta-title">Conocé nuestro enfoque</h2>
+          <p>
+            Trabajamos con compromiso, cercanía y rigor profesional para
+            ofrecer respuestas legales adaptadas a cada situación.
+          </p>
+          <a class="button button--primary" href="./nosotros.html">
+            Ver más
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="testimonials__heading">
+          <p class="testimonials__eyebrow">Experiencias</p>
+          <h2 id="testimonials-title" class="testimonials__title">
+            Lo que dicen nuestros clientes
+          </h2>
+          <p class="testimonials__description">
+            La confianza de quienes nos eligen es nuestro mayor respaldo.
+          </p>
+        </div>
+
+        <div class="testimonials__carousel">
+          <div
+            class="testimonials__viewport"
+            tabindex="0"
+            aria-label="Comentarios de clientes"
+            aria-roledescription="carrusel"
+          >
+            <div class="testimonials__track">
+              <article
+                class="testimonial is-active"
+                aria-label="Testimonio 1 de 3"
+              >
+                <div class="testimonial__content">
+                  <div class="testimonial__stars" aria-label="5 de 5 estrellas">
+                    ★★★★★
+                  </div>
+                  <blockquote class="testimonial__quote">
+                    Recibí un acompañamiento claro y profesional durante todo
+                    el proceso. Siempre estuvieron disponibles para responder
+                    mis dudas y explicarme cada paso con mucha paciencia.
+                  </blockquote>
+                  <p class="testimonial__author">Cliente particular</p>
+                  <p class="testimonial__matter">Asesoramiento civil</p>
+                </div>
+                <div class="testimonial__visual" aria-hidden="true">
+                  <span class="testimonial__monogram">ASE</span>
+                  <span>Estudio Jurídico</span>
+                </div>
+              </article>
+
+              <article class="testimonial" aria-label="Testimonio 2 de 3">
+                <div class="testimonial__content">
+                  <div class="testimonial__stars" aria-label="5 de 5 estrellas">
+                    ★★★★★
+                  </div>
+                  <blockquote class="testimonial__quote">
+                    Destaco el trato humano, la transparencia y la rapidez con
+                    la que abordaron mi situación. Me sentí respaldado desde la
+                    primera consulta hasta la resolución del caso.
+                  </blockquote>
+                  <p class="testimonial__author">Cliente particular</p>
+                  <p class="testimonial__matter">Derecho laboral</p>
+                </div>
+                <div class="testimonial__visual" aria-hidden="true">
+                  <span class="testimonial__monogram">ASE</span>
+                  <span>Estudio Jurídico</span>
+                </div>
+              </article>
+
+              <article class="testimonial" aria-label="Testimonio 3 de 3">
+                <div class="testimonial__content">
+                  <div class="testimonial__stars" aria-label="5 de 5 estrellas">
+                    ★★★★★
+                  </div>
+                  <blockquote class="testimonial__quote">
+                    Encontré un equipo comprometido que escuchó mi caso y me
+                    ofreció una estrategia concreta. La atención fue cercana,
+                    respetuosa y muy profesional.
+                  </blockquote>
+                  <p class="testimonial__author">Cliente particular</p>
+                  <p class="testimonial__matter">Derecho de familia</p>
+                </div>
+                <div class="testimonial__visual" aria-hidden="true">
+                  <span class="testimonial__monogram">ASE</span>
+                  <span>Estudio Jurídico</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="testimonials__controls">
+            <button
+              type="button"
+              class="testimonials__arrow testimonials__arrow--previous"
+              aria-label="Ver testimonio anterior"
+            >
+              ←
+            </button>
+            <div class="testimonials__dots" aria-label="Elegir testimonio">
+              <button
+                type="button"
+                class="testimonials__dot is-active"
+                aria-label="Ver testimonio 1"
+                aria-current="true"
+                data-testimonial-index="0"
+              ></button>
+              <button
+                type="button"
+                class="testimonials__dot"
+                aria-label="Ver testimonio 2"
+                data-testimonial-index="1"
+              ></button>
+              <button
+                type="button"
+                class="testimonials__dot"
+                aria-label="Ver testimonio 3"
+                data-testimonial-index="2"
+              ></button>
+            </div>
+            <button
+              type="button"
+              class="testimonials__arrow testimonials__arrow--next"
+              aria-label="Ver testimonio siguiente"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contacto PROVISIONAL CHEQUEAR DESPUES -->
@@ -618,9 +907,9 @@
         <h2 class="footer__title">Links</h2>
         <ul class="footer__links">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+          <li><a href="./nosotros.html#equipo">Equipo</a></li>
         </ul>
       </div>
 
@@ -639,13 +928,13 @@
       <div class="footer__column">
         <h2 class="footer__title">Servicios</h2>
         <ul class="footer__links">
-          <li><a href="#servicios">Derecho Civil</a></li>
-          <li><a href="#servicios">Derecho Penal</a></li>
-          <li><a href="#servicios">Derecho Familiar</a></li>
-          <li><a href="#servicios">Derecho Laboral</a></li>
+          <li><a href="./servicios.html#civil">Derecho Civil</a></li>
+          <li><a href="./servicios.html#penal">Derecho Penal</a></li>
+          <li><a href="./servicios.html#familia">Derecho Familiar</a></li>
+          <li><a href="./servicios.html#laboral">Derecho Laboral</a></li>
           <li>
             <a
-              href="#servicios"
+              href="./servicios.html#discapacidad"
             >
               Discapacidad
             </a>

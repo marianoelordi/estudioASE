@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Conocé al equipo y la trayectoria de ASE Estudio Jurídico."
+  >
+  <title>Nosotros | ASE Estudio Jurídico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="about-page">
+  <header class="header">
+    <div class="container header__container">
+      <a href="./index.html" class="header__logo" aria-label="Ir al inicio">
+        <img src="./styles/logo/ase-logo-circular.svg" alt="ASE Estudio Jurídico" width="140" height="50">
+      </a>
+      <button
+        class="header__menu-button"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+      >
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+        <span class="header__menu-line"></span>
+      </button>
+      <nav id="main-navigation" class="header__navigation" aria-label="Navegación principal">
+        <ul class="header__menu">
+          <li><a class="header__link" href="./index.html">Inicio</a></li>
+          <li><a class="header__link" href="./servicios.html">Servicios</a></li>
+          <li><a class="header__link is-active" href="#inicio">Nosotros</a></li>
+          <li><a class="header__link" href="#equipo">Equipo</a></li>
+          <li><a class="header__link" href="./index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:+543704278185">
+        <span aria-hidden="true">☎</span>
+        <span>0370-4278185</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="about-page__main">
+    <section id="inicio" class="about-page__hero">
+      <div class="container"><h1>Nosotros</h1></div>
+    </section>
+
+    <section id="equipo" class="team about-page__team">
+      <div class="container">
+        <div class="team__heading">
+          <h2 class="team__title">Nuestro Equipo</h2>
+          <p class="team__description">
+            Profesionales comprometidos con brindar asesoramiento jurídico
+            responsable, cercano y personalizado.
+          </p>
+        </div>
+
+        <div class="team__grid">
+          <article class="professional-card">
+            <button type="button" class="professional-card__toggle" aria-expanded="false" aria-controls="about-azcona">
+              <div class="professional-card__image" aria-hidden="true"><span class="professional-card__silhouette"></span></div>
+              <div class="professional-card__content">
+                <h3 class="professional-card__name">Dr. Daniel Alberto Azcona</h3>
+                <p class="professional-card__role">Abogado</p>
+              </div>
+              <span class="professional-card__icon" aria-hidden="true"></span>
+            </button>
+            <div id="about-azcona" class="professional-card__details" hidden>
+              <div class="professional-card__details-inner">
+                <p class="professional-card__specialty">Derecho Civil, Laboral, de Familia y Penal</p>
+                <p class="professional-card__bio">
+                  Abogado egresado de la Facultad de Derecho de la Universidad
+                  Nacional de Rosario, orientado al asesoramiento jurídico en
+                  Formosa y el ámbito federal.
+                </p>
+                <ul class="professional-card__meta">
+                  <li>M.P. N.º 2.992 — Provincia de Formosa</li>
+                  <li>T.º 100, F.º 981 — Fuero Federal</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="professional-card">
+            <button type="button" class="professional-card__toggle" aria-expanded="false" aria-controls="about-elordi">
+              <div class="professional-card__image" aria-hidden="true"><span class="professional-card__silhouette"></span></div>
+              <div class="professional-card__content">
+                <h3 class="professional-card__name">Dr. Elordi Eliseo</h3>
+                <p class="professional-card__role">Abogado</p>
+              </div>
+              <span class="professional-card__icon" aria-hidden="true"></span>
+            </button>
+            <div id="about-elordi" class="professional-card__details" hidden>
+              <div class="professional-card__details-inner">
+                <p class="professional-card__specialty">Derecho Laboral y Previsional</p>
+                <p class="professional-card__bio">
+                  Acompaña a trabajadores y empleadores en conflictos,
+                  negociaciones y trámites previsionales.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="professional-card">
+            <button type="button" class="professional-card__toggle" aria-expanded="false" aria-controls="about-sanchez">
+              <div class="professional-card__image" aria-hidden="true"><span class="professional-card__silhouette"></span></div>
+              <div class="professional-card__content">
+                <h3 class="professional-card__name">Dr. Sanchez Rodolfo</h3>
+                <p class="professional-card__role">Abogado</p>
+              </div>
+              <span class="professional-card__icon" aria-hidden="true"></span>
+            </button>
+            <div id="about-sanchez" class="professional-card__details" hidden>
+              <div class="professional-card__details-inner">
+                <p class="professional-card__specialty">Derecho Penal</p>
+                <p class="professional-card__bio">
+                  Brinda defensa y asesoramiento en causas penales durante cada
+                  etapa del proceso.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-showcase">
+      <div class="container">
+        <div class="about-showcase__video">
+          <span class="about-showcase__play" aria-hidden="true">▶</span>
+          <h2>Las Mejores Soluciones</h2>
+          <p>Asesoramiento responsable y estrategias adaptadas a cada caso.</p>
+        </div>
+        <dl class="about-showcase__stats">
+          <div><dt>1200</dt><dd>Clientes satisfechos</dd></div>
+          <div><dt>98%</dt><dd>Casos exitosos</dd></div>
+          <div><dt>32</dt><dd>Años de experiencia</dd></div>
+          <div><dt>1800</dt><dd>Casos cerrados</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="about-history">
+      <div class="container">
+        <h2>Acerca del Estudio Jurídico</h2>
+        <div class="about-history__content">
+          <img src="./styles/logo/ase-logo-circular.svg" alt="ASE Estudio Jurídico" width="230" height="230">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut et massa
+            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
+            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
+            nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo
+            lacus at sodales sodales.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__main">
+      <div class="footer__brand">
+        <a href="./index.html" class="footer__logo">
+          <img src="./styles/logo/ase-logo-circular.svg" alt="" width="42" height="42">
+          <span>Estudio Jurídico ASE</span>
+        </a>
+        <p class="footer__description">Asesoramiento jurídico responsable, cercano y personalizado.</p>
+      </div>
+      <div class="footer__column">
+        <h2 class="footer__title">Links</h2>
+        <ul class="footer__links">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="#inicio">Nosotros</a></li>
+          <li><a href="./index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__column footer__column--location">
+        <h2 class="footer__title">Encontranos</h2>
+        <address class="footer__address">
+          <p>Avenida Napoleón Uriburu 100</p><p>Departamento 2</p>
+          <a href="tel:+543704278185">0370-4278185</a>
+          <a href="mailto:estudiojuridicoazconasanchez@gmail.com">estudiojuridicoazconasanchez@gmail.com</a>
+        </address>
+      </div>
+      <div class="footer__column">
+        <h2 class="footer__title">Servicios</h2>
+        <ul class="footer__links">
+          <li><a href="./servicios.html#civil">Derecho Civil</a></li>
+          <li><a href="./servicios.html#penal">Derecho Penal</a></li>
+          <li><a href="./servicios.html#familia">Derecho Familiar</a></li>
+          <li><a href="./servicios.html#laboral">Derecho Laboral</a></li>
+          <li><a href="./servicios.html#discapacidad">Discapacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom"><p>&copy; Copyright 2026. FORMOSA ARGENTINA</p></div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
