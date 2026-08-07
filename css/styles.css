@@ -1007,7 +1007,16 @@ button {
   background-color: #c6c6c6;
   transform: translateX(-50%);
 }
-
+.professional-card__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.professional-card__photo--sanchez {
+  object-position: center 70%;
+}
 .professional-card__content {
   padding: 1.15rem 0.5rem 0;
 }
