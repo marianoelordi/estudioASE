@@ -15,7 +15,7 @@
     rel="stylesheet"
   >
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css?v=20260813-9">
 </head>
 <body class="services-page">
   <header class="header">
@@ -27,6 +27,9 @@
           width="140"
           height="50"
         >
+        <div class="header__logo-names" aria-hidden="true">
+          <span>Azcona</span><span>Sanchez</span><span>Elordi</span>
+        </div>
       </a>
 
       <button
@@ -53,9 +56,6 @@
           </li>
           <li>
             <a class="header__link" href="./nosotros.html">Nosotros</a>
-          </li>
-          <li>
-            <a class="header__link" href="./nosotros.html#equipo">Equipo</a>
           </li>
           <li>
             <a class="header__link" href="./index.html#contacto">Contacto</a>
@@ -98,9 +98,17 @@
                 contrataciones, despidos, conflictos laborales y reclamos de
                 haberes.
               </p>
-              <a class="service-card__button" href="./index.html#contacto">
-                Consultar servicio
-              </a>
+              <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="service-laboral-details">
+                <span>Ver detalles</span><span class="service-card__toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div id="service-laboral-details" class="service-card__details" hidden>
+                <div class="service-card__details-inner">
+                  <h3>¿Cómo podemos ayudarte?</h3>
+                  <ul><li>Despidos, indemnizaciones y diferencias salariales.</li><li>Accidentes y enfermedades laborales.</li><li>Contratos, sanciones y asesoramiento preventivo a empleadores.</li></ul>
+                  <p>Revisamos la documentación y definimos una estrategia clara antes de iniciar cualquier reclamo.</p>
+                  <a class="service-card__button" href="./index.html?servicio=laboral#contacto">Consultar servicio</a>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -114,9 +122,17 @@
                 Defensa técnica en causas penales y asesoramiento a imputados y
                 víctimas en todas las etapas del proceso.
               </p>
-              <a class="service-card__button" href="./index.html#contacto">
-                Consultar servicio
-              </a>
+              <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="service-penal-details">
+                <span>Ver detalles</span><span class="service-card__toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div id="service-penal-details" class="service-card__details" hidden>
+                <div class="service-card__details-inner">
+                  <h3>Asistencia inmediata y confidencial</h3>
+                  <ul><li>Defensa de personas imputadas y detenidas.</li><li>Representación de víctimas y presentación de querellas.</li><li>Excarcelaciones, medidas urgentes y seguimiento de causas.</li></ul>
+                  <p>Analizamos el expediente y explicamos cada alternativa con absoluta reserva profesional.</p>
+                  <a class="service-card__button" href="./index.html?servicio=penal#contacto">Consultar servicio</a>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -130,9 +146,17 @@
                 Accidentes de tránsito, contratos, conflictos sobre inmuebles,
                 testamentos y sucesiones.
               </p>
-              <a class="service-card__button" href="./index.html#contacto">
-                Consultar servicio
-              </a>
+              <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="service-civil-details">
+                <span>Ver detalles</span><span class="service-card__toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div id="service-civil-details" class="service-card__details" hidden>
+                <div class="service-card__details-inner">
+                  <h3>Protección de tus derechos y patrimonio</h3>
+                  <ul><li>Daños y perjuicios por accidentes.</li><li>Contratos, alquileres y conflictos inmobiliarios.</li><li>Sucesiones, testamentos y declaratorias de herederos.</li></ul>
+                  <p>Evaluamos pruebas, plazos y costos para recomendar la vía más conveniente.</p>
+                  <a class="service-card__button" href="./index.html?servicio=civil#contacto">Consultar servicio</a>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -146,9 +170,17 @@
                 Divorcios, cuotas alimentarias, régimen de comunicación,
                 filiación, adopción y demás asuntos familiares.
               </p>
-              <a class="service-card__button" href="./index.html#contacto">
-                Consultar servicio
-              </a>
+              <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="service-familia-details">
+                <span>Ver detalles</span><span class="service-card__toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div id="service-familia-details" class="service-card__details" hidden>
+                <div class="service-card__details-inner">
+                  <h3>Soluciones cuidadas para situaciones sensibles</h3>
+                  <ul><li>Divorcios y división de bienes.</li><li>Alimentos, cuidado personal y régimen de comunicación.</li><li>Filiación, adopción y autorizaciones judiciales.</li></ul>
+                  <p>Priorizamos acuerdos sostenibles sin dejar de proteger tus derechos y los de niñas, niños y adolescentes.</p>
+                  <a class="service-card__button" href="./index.html?servicio=familia#contacto">Consultar servicio</a>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -162,9 +194,17 @@
                 Asesoramiento y gestión de conflictos mediante negociaciones,
                 acuerdos y mediaciones, evitando llegar a juicio.
               </p>
-              <a class="service-card__button" href="./index.html#contacto">
-                Consultar servicio
-              </a>
+              <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="service-extrajudicial-details">
+                <span>Ver detalles</span><span class="service-card__toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div id="service-extrajudicial-details" class="service-card__details" hidden>
+                <div class="service-card__details-inner">
+                  <h3>Resolver antes de llegar a juicio</h3>
+                  <ul><li>Negociación y redacción de acuerdos.</li><li>Mediaciones y conciliaciones.</li><li>Intimaciones, cartas documento y análisis preventivo.</li></ul>
+                  <p>Buscamos una solución ágil, documentada y jurídicamente segura que reduzca tiempos y costos.</p>
+                  <a class="service-card__button" href="./index.html?servicio=extrajudicial#contacto">Consultar servicio</a>
+                </div>
+              </div>
             </div>
           </article>
         </div>
@@ -269,6 +309,9 @@
     </div>
   </footer>
 
-  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+  <script src="./js/main.js?v=20260813-9"></script>
 </body>
 </html>
