@@ -13,3 +13,7 @@ Una cosa a revisar sería lo del formulario de contacto, eso era algo que querí
 // ACTUALIZACION 7/8
 
 Practicamente hecha, falta la funcionalidad del formulario, boton de wsp, y confirmación para empezar a terminarla
+
+// ACTUALIZACION 14/8
+
+falta la funcionalidad del formulario, añadimos paginas para cada seccion, resta borrar detalles del sector de nosotros, la historia del estudio, y el servicio de formulario
