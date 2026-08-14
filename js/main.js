@@ -70,6 +70,8 @@ if (currentPage === "servicios.html") {
   setActiveNavigationLink("servicios");
 } else if (currentPage === "nosotros.html") {
   setActiveNavigationLink("nosotros");
+} else if (currentPage === "contacto.html") {
+  setActiveNavigationLink("contacto");
 } else {
   const homeSections = [
     ["inicio", "inicio"], ["nosotros", "nosotros"], ["contacto", "contacto"],
@@ -312,6 +314,120 @@ if (requestedService && contactService && all("option", contactService).some(({ 
   contactService.value = requestedService;
 }
 
+// Diálogo compartido para el progreso y el resultado del envío.
+const contactDialog = document.createElement("div");
+contactDialog.className = "contact-dialog";
+contactDialog.hidden = true;
+contactDialog.innerHTML = `
+  <div class="contact-dialog__backdrop"></div>
+  <div class="contact-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-message">
+    <div class="contact-dialog__indicator" aria-hidden="true">
+      <span class="contact-dialog__spinner"></span>
+      <svg class="contact-dialog__check" viewBox="0 0 24 24" focusable="false"><path d="m5 12 4 4L19 6"/></svg>
+      <svg class="contact-dialog__error" viewBox="0 0 24 24" focusable="false"><path d="M7 7l10 10M17 7 7 17"/></svg>
+    </div>
+    <h2 id="contact-dialog-title"></h2>
+    <p id="contact-dialog-message"></p>
+    <button class="contact-dialog__close" type="button">Cerrar</button>
+  </div>
+`;
+document.body.append(contactDialog);
+
+const dialogTitle = contactDialog.querySelector("#contact-dialog-title");
+const dialogMessage = contactDialog.querySelector("#contact-dialog-message");
+const dialogClose = contactDialog.querySelector(".contact-dialog__close");
+
+const showContactDialog = (state, title, message) => {
+  contactDialog.className = `contact-dialog is-${state}`;
+  contactDialog.hidden = false;
+  dialogTitle.textContent = title;
+  dialogMessage.textContent = message;
+  dialogClose.hidden = state === "loading";
+  document.body.classList.add("contact-dialog-open");
+  if (state !== "loading") dialogClose.focus();
+};
+
+const closeContactDialog = () => {
+  contactDialog.hidden = true;
+  document.body.classList.remove("contact-dialog-open");
+};
+
+dialogClose.addEventListener("click", closeContactDialog);
+contactDialog.querySelector(".contact-dialog__backdrop").addEventListener("click", () => {
+  if (!contactDialog.classList.contains("is-loading")) closeContactDialog();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !contactDialog.hidden && !contactDialog.classList.contains("is-loading")) {
+    closeContactDialog();
+  }
+});
+
+const EMAILJS_CONFIG = Object.freeze({
+  serviceId: "service_zah6jvu",
+  templateId: "template_jaahq0d",
+  publicKey: "Rua6aBh4ExLYNsfn2",
+});
+
+// Envío en segundo plano mediante una plantilla personalizable de EmailJS.
+all(".contact-form").forEach((form) => {
+  const submitButton = form.querySelector('.contact-form__submit[type="submit"]');
+  const status = form.querySelector(".contact-form__status");
+  if (!submitButton || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (form.elements.namedItem("_honey")?.value) return;
+
+    const originalLabel = submitButton.textContent.trim();
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando…";
+    status.textContent = "";
+    status.className = "contact-form__status";
+    showContactDialog("loading", "Enviando consulta", "Estamos enviando tus datos de forma segura.");
+
+    try {
+      const fieldValue = (name) => form.elements.namedItem(name)?.value.trim() || "";
+      const serviceSelect = form.elements.namedItem("servicio");
+      const serviceName = serviceSelect.options[serviceSelect.selectedIndex].text;
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: EMAILJS_CONFIG.serviceId,
+          template_id: EMAILJS_CONFIG.templateId,
+          user_id: EMAILJS_CONFIG.publicKey,
+          template_params: {
+            servicio: serviceName,
+            asunto: fieldValue("asunto"),
+            descripcion: fieldValue("mensaje"),
+            nombre: fieldValue("nombre"),
+            telefono: fieldValue("telefono"),
+            email: fieldValue("email"),
+            reply_to: fieldValue("email"),
+            to_email: "ulisesayala155@gmail.com",
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("No se pudo enviar la consulta");
+      }
+
+      form.reset();
+      status.textContent = "Consulta enviada. Gracias por comunicarte.";
+      status.classList.add("is-success");
+      showContactDialog("success", "¡Consulta enviada!", "Recibimos tu mensaje correctamente. Nos comunicaremos con vos a la brevedad.");
+    } catch (error) {
+      status.textContent = "No pudimos enviar la consulta. Intentá nuevamente en unos minutos.";
+      status.classList.add("is-error");
+      showContactDialog("error", "No pudimos enviarla", "Revisá tu conexión e intentá nuevamente en unos minutos.");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalLabel;
+    }
+  });
+});
+
 // Reveals individuales: cada bloque espera a entrar realmente al viewport.
 const revealEach = (selector, from, to) => {
   if (!motionEnabled || !ScrollTrigger) return;
@@ -355,17 +471,17 @@ if (motionEnabled && ScrollTrigger) {
   });
 
   revealEach(
-    ".about__title, .faq__title, .team__title, .section-heading__title, .services-faq h2, .testimonials__title, .contact__title, .about-showcase__video h2, .about-history h2, .about-page__hero h1",
+    ".about__title, .faq__title, .team__title, .section-heading__title, .services-faq h2, .testimonials__title, .contact__title, .about-showcase__heading h2, .about-history h2, .about-page__hero h1",
     { autoAlpha: 0, y: 40, filter: "blur(2px)" },
     { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: MOTION.ease.strong }
   );
   revealEach(
-    ".about__story-content > *, .section-heading__eyebrow, .section-heading__description, .team__description, .faq__button, .team-cta__content, .testimonials__eyebrow, .testimonials__description, .contact__content > :not(.contact__title), .about-showcase__video p, .about-history__content p",
+    ".about__story-content > *, .section-heading__eyebrow, .section-heading__description, .team__description, .faq__button, .team-cta__content, .testimonials__eyebrow, .testimonials__description, .contact__content > :not(.contact__title), .about-showcase__heading > p, .about-showcase__heading > span, .about-history__content p",
     { autoAlpha: 0, y: 24 },
     { autoAlpha: 1, y: 0, duration: 0.58, ease: MOTION.ease.out }
   );
   revealEach(
-    ".about__story-visual, .team-cta__visual, .about-showcase__video, .about-history__content img",
+    ".about__story-visual, .team-cta__visual, .about-showcase__approach, .about-history__content img",
     { autoAlpha: 0, y: 25, scale: 1.04 },
     { autoAlpha: 1, y: 0, scale: 1, duration: 0.78, ease: MOTION.ease.strong }
   );
@@ -374,7 +490,7 @@ if (motionEnabled && ScrollTrigger) {
     { autoAlpha: 0, y: 28 },
     { autoAlpha: 1, y: 0, duration: 0.65, ease: MOTION.ease.strong }
   );
-  revealCardBatches(".principle-card, .service-card, .professional-card, .about-showcase__stats > div");
+  revealCardBatches(".principle-card, .service-card, .professional-card, .about-showcase__steps > li, .about-showcase__stats > div");
 }
 
 // Profundidad sutil en fondos con gradientes oscuros
