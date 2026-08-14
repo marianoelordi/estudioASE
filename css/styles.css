@@ -2147,7 +2147,24 @@ button:focus-visible {
   font-size: 0.85rem;
   text-align: center;
 }
+ /* nombre de abogados bajo del logo */
+ .header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
 
+.header__surnames {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
  /* Seccion media */
 @media (max-width: 1024px) {
   .services__grid {
