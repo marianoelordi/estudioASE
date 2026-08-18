@@ -73,20 +73,7 @@ if (currentPage === "servicios.html") {
 } else if (currentPage === "contacto.html") {
   setActiveNavigationLink("contacto");
 } else {
-  const homeSections = [
-    ["inicio", "inicio"], ["nosotros", "nosotros"], ["contacto", "contacto"],
-  ].map(([id, label]) => ({ element: document.getElementById(id), label }))
-    .filter(({ element }) => element && !element.hidden);
-
-  const updateHomeNavigation = () => {
-    let active = homeSections[0];
-    homeSections.forEach((section) => {
-      if (section.element.getBoundingClientRect().top <= innerHeight * 0.35) active = section;
-    });
-    if (active) setActiveNavigationLink(active.label);
-  };
-  updateHomeNavigation();
-  window.addEventListener("scroll", updateHomeNavigation, { passive: true });
+  setActiveNavigationLink("inicio");
 }
 
 if (menuButton && navigation) {
@@ -404,7 +391,7 @@ all(".contact-form").forEach((form) => {
             telefono: fieldValue("telefono"),
             email: fieldValue("email"),
             reply_to: fieldValue("email"),
-            to_email: "ulisesayala155@gmail.com",
+            to_email: "estudiojuridicoazconasanchez@gmail.com",
           },
         }),
       });

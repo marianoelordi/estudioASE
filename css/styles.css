@@ -2537,6 +2537,20 @@ body.contact-dialog-open {
   }
 }
 
+
+.about__story-visual {
+  min-height: 260px;
+  padding: 0;
+  overflow: hidden;
+  background: none;
+}
+  .about__story-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 900px) {
   .about__story {
     grid-template-columns: 1fr;
@@ -2544,8 +2558,16 @@ body.contact-dialog-open {
   }
 
   .about__story-visual {
-    min-height: 220px;
+    padding: 0;
+    overflow: hidden;
   }
+
+  .about__story-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
   .about__grid {
     grid-template-columns: 1fr;
