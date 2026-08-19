@@ -350,9 +350,9 @@ document.addEventListener("keydown", (event) => {
 });
 
 const EMAILJS_CONFIG = Object.freeze({
-  serviceId: "service_zah6jvu",
-  templateId: "template_jaahq0d",
-  publicKey: "Rua6aBh4ExLYNsfn2",
+  serviceId: "service_khivmeb",
+  templateId: "template_ethp7dn",
+  publicKey: "EVDbVVGQvUXvag0HR",
 });
 
 // Envío en segundo plano mediante una plantilla personalizable de EmailJS.
