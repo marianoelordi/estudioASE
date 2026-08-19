@@ -17,3 +17,7 @@ Practicamente hecha, falta la funcionalidad del formulario, boton de wsp, y conf
 // ACTUALIZACION 14/8
 
 falta la funcionalidad del formulario, añadimos paginas para cada seccion, resta borrar detalles del sector de nosotros, la historia del estudio, y el servicio de formulario
+
+// ACTUALIZACIÓN 19/8
+
+pagina terminada
